@@ -2,6 +2,9 @@
 
 一个单文件网页小游戏。**不装任何东西、不联网、不用开服务器**——双击 `index.html` 就能玩。
 
+> 🎮 **在线直接玩**：<https://simmerfish.github.io/whalechan-rice/>
+> 手机上打开这个链接，横过来就能玩。
+
 - 代码：[MIT](LICENSE)
 - 角色与立绘：角色「鲸鱼娘 / Whale-chan」设定来自社区项目 [Neko3000/deepseek-whalechan](https://github.com/Neko3000/deepseek-whalechan)，**非商业**使用，详见 [CREDITS.md](CREDITS.md)
 
