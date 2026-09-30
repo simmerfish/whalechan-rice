@@ -2,7 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
-const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+// 默认测 index.html；想测自包含单文件版就 HTML_FILE=whalechan-standalone.html node tools/harness2.js
+const html = fs.readFileSync(
+  process.env.HTML_FILE ? path.resolve(ROOT, process.env.HTML_FILE) : path.join(ROOT, 'index.html'), 'utf8');
 const code = html.match(/<script>([\s\S]*)<\/script>/)[1];
 let frameTexts = [], frameImgs = [], frameEll = [];
 function mkCtx(){
@@ -26,11 +28,21 @@ global.window = { innerWidth:1440, innerHeight:900, devicePixelRatio:2,
 global.document = { getElementById:()=>canvas, documentElement:{},
   addEventListener:(t,f)=>{(LD[t]=LD[t]||[]).push(f);} };
 const ART_DIMS = { 'whalechan-closed.png':[470,839], 'whalechan-open.png':[440,831], 'whalechan-happy.png':[504,847] };
+function dimsOf(src){
+  for (const k in ART_DIMS){ if (src.indexOf(k)>=0) return ART_DIMS[k]; }
+  // 自包含单文件版里立绘是 data URI，直接从 PNG 的 IHDR 读尺寸
+  const m = src.match(/^data:image\/png;base64,/);
+  if (m){
+    const b = Buffer.from(src.slice(m[0].length), 'base64');
+    if (b.length > 24 && b.slice(12,16).toString() === 'IHDR') return [b.readUInt32BE(16), b.readUInt32BE(20)];
+  }
+  return null;
+}
 global.Image = class {
   constructor(){ this.naturalWidth=0; this.naturalHeight=0; this._src=''; }
   get src(){ return this._src; }
   set src(v){ this._src=String(v);
-    for (const k in ART_DIMS){ if (this._src.indexOf(k)>=0){ this.naturalWidth=ART_DIMS[k][0]; this.naturalHeight=ART_DIMS[k][1]; } }
+    const d = dimsOf(this._src); if (d){ this.naturalWidth=d[0]; this.naturalHeight=d[1]; }
     if (this.onload) this.onload(); }
 };
 global.localStorage = { getItem:()=>null, setItem(){} };

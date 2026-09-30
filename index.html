@@ -265,6 +265,10 @@ function toggleFullscreen(){
 
 /* ---------------- 立绘 ---------------- */
 var ART = { closed:null, open:null, happy:null };
+/* ART_INLINE：普通版是 null，立绘从 art/ 目录读文件。
+   tools/inline.py 生成「自包含单文件版」时，会把下一行整行换成内联的 base64，
+   这样那个 html 就算身边没有 art/ 目录、也完全不联网，照样能玩。 */
+var ART_INLINE = null;
 var artOK = false;
 (function loadArt(){
   var names = ['closed','open','happy'], left = names.length, ok = 0;
@@ -272,7 +276,7 @@ var artOK = false;
     var im = new Image();
     im.onload  = function(){ if (im.naturalWidth > 0) ok++; if (--left === 0) artOK = (ok === 3); };
     im.onerror = function(){ if (--left === 0) artOK = (ok === 3); };
-    im.src = 'art/whalechan-' + k + '.png';
+    im.src = (ART_INLINE && ART_INLINE[k]) || ('art/whalechan-' + k + '.png');
     ART[k] = im;
   });
 })();

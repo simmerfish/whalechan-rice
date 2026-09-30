@@ -1,16 +1,47 @@
 # 鲸鱼娘吃大白饭 🐳🍚
 
-一个单文件网页小游戏。**不装任何东西、不联网、不用开服务器**——双击 `index.html` 就能玩。
+一个单文件网页小游戏。**不装任何东西、不联网、不用开服务器**——双击就能玩。
 
-> 🎮 **在线直接玩**：<https://simmerfish.github.io/whalechan-rice/>
-> 手机上打开这个链接，横过来就能玩。
+## 两种拿法，按你的网络挑
+
+| | 怎么拿 | 说明 |
+| --- | --- | --- |
+| 📦 | **[单文件离线版](whalechan-standalone.html)**（1.3 MB，**推荐**） | **最稳**。三张立绘已经内联在文件里，拿到这**一个** html 就能玩，全程不联网；可以直接用微信 / QQ 发给别人。**中国大陆首选。** |
+| 🎮 | **在线玩** <https://simmerfish.github.io/whalechan-rice/> | 打开就能玩、不用下载。但 **GitHub 的域名在国内时通时不通**，打不开就用上面那个。 |
 
 - 代码：[MIT](LICENSE)
 - 角色与立绘：角色「鲸鱼娘 / Whale-chan」设定来自社区项目 [Neko3000/deepseek-whalechan](https://github.com/Neko3000/deepseek-whalechan)，**非商业**使用，详见 [CREDITS.md](CREDITS.md)
 
 ---
 
-## 怎么打开
+## 在中国大陆怎么打开 / 分享
+
+GitHub 的域名在国内**时通时不通**，所以准备了下面几条路，从最稳的开始。
+
+### ✅ 一、单文件离线版（最稳，推荐）
+
+1. 去仓库里点开 `[whalechan-standalone.html](whalechan-standalone.html)`，右上角 **Download raw file** 把它下下来
+2. 得到**一个 1.3 MB 的 html 文件**，双击就能玩
+3. 想分享就把它扔进微信 / QQ —— 对方收到这**一个文件**，用手指点开就能玩，不用下载别的东西、**不用联网**
+
+> 为什么一个文件就够了：三张立绘已经被 base64 内联进去了（生成脚本是 `tools/inline.py`）。
+> 代价是文件大了 1.3 MB，好处是**彻底不依赖网络**，连 `art/` 目录都不需要。
+
+### 二、在线玩
+
+- **GitHub Pages（完整版）**：<https://simmerfish.github.io/whalechan-rice/>
+- **GitHub Pages（单文件版）**：<https://simmerfish.github.io/whalechan-rice/whalechan-standalone.html>
+- 打不开的话，通常是 DNS 被污染：把 DNS 换成 `223.5.5.5`（阿里）或 `119.29.29.29`（腾讯）再试试。
+
+### ⚠️ 三、关于 jsDelivr
+
+网上常说用 jsDelivr 加速 GitHub 上的东西，但**这个游戏不能那么用**：
+实测 jsDelivr 对 `.html` 返回的是 `text/plain`，浏览器会把源码当纯文本显示，**不会运行游戏**。
+它只能当**下载源**用，下那个单文件倒是挺快：
+
+<https://cdn.jsdelivr.net/gh/simmerfish/whalechan-rice@main/whalechan-standalone.html>
+
+### 四、本地打开（完整版）
 
 在访达里双击 `index.html`，或者终端里：
 
@@ -20,7 +51,7 @@ open index.html
 
 推荐用 Chrome / Edge / Safari。窗口越大越清晰（会自动等比放大，最多按 2 倍像素渲染）。
 
-手机上也能玩：把这个文件夹传到手机（或用浏览器打开同一个文件），**横屏**、按住屏幕张嘴即可，玩法见下面的「操作」。
+手机上也能玩：把整个文件夹传到手机，**横屏**、按住屏幕张嘴即可，玩法见下面的「操作」。
 
 ---
 
@@ -158,8 +189,9 @@ var ITEMS = { rice: {...}, golden: {...}, ... };  // 每件道具的分数、饱
 
 ```
 whale-game/
-├── index.html          ← 整个游戏（HTML + CSS + JS 全在这一个文件里）
-├── art/                ← 透明底立绘，游戏直接加载
+├── index.html                ← 整个游戏（HTML + CSS + JS 全在这一个文件里）
+├── whalechan-standalone.html ← 【自动生成】自包含单文件版，立绘已内联，可离线玩 / 微信传
+├── art/                      ← 透明底立绘，游戏直接加载
 │   ├── whalechan-closed.png   闭嘴常态
 │   ├── whalechan-open.png     张嘴接饭
 │   └── whalechan-happy.png    开心（菜单/结算）
@@ -174,6 +206,7 @@ whale-game/
 │   ├── preview_touch.py     把触屏虚拟键和 HUD 画在一起，检查有没有互相遮挡
 │   ├── harness2.js          界面导航 + 120 秒乱按压力测试（键盘）
 │   └── harness3.js          专项：通关流程 / buff 覆盖 / UI 越界 / 触屏与指针交互
+├── worklog/            ← 过程稿（手绘 SVG 六版 + AI 原始大图），玩游戏不需要，可整目录删
 ├── LICENSE             ← 代码的 MIT 授权
 └── CREDITS.md          ← 角色来源与授权说明（重要，用之前先看）
 ```
@@ -192,7 +225,9 @@ python3 tools/keyout.py 输入.png 输出.png 34     # 抠图（第三个参数�
 python3 tools/composite.py                      # → preview/halo-check-*.png，检查白边
 python3 tools/preview_hitbox.py                 # → preview/check_layout.png / check_states.png
 python3 tools/preview_touch.py                  # → preview/check_touch.png
+python3 tools/inline.py                         # 生成 whalechan-standalone.html（自包含单文件版）
 node    tools/harness2.js                       # 回归：界面导航 + 120 秒乱按压力测试
+HTML_FILE=whalechan-standalone.html node tools/harness2.js   # 回归：那份单文件版也要能跑
 node    tools/harness3.js                       # 回归：通关 / buff / UI 越界 / 触屏交互
 ```
 

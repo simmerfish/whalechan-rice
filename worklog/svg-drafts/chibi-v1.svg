@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" width="760" height="560">
+  <defs>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cdeafd"/><stop offset="1" stop-color="#7cc0ec"/>
+    </linearGradient>
+    <linearGradient id="dress" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#63b0e8"/><stop offset="1" stop-color="#2f7cc4"/>
+    </linearGradient>
+    <linearGradient id="belly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dcf0ff"/>
+    </linearGradient>
+    <radialGradient id="blush" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff9db4" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ff9db4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="shine" cx="0.35" cy="0.3" r="0.7">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <g id="wg">
+      <!-- 鲸鱼尾鳍 -->
+      <g transform="translate(88,152) rotate(-18)">
+        <ellipse cx="-24" cy="0" rx="30" ry="13" fill="url(#skin)"/>
+        <ellipse cx="24" cy="0" rx="30" ry="13" fill="url(#skin)"/>
+      </g>
+      <!-- 身体 -->
+      <ellipse cx="0" cy="128" rx="63" ry="74" fill="url(#dress)"/>
+      <ellipse cx="0" cy="142" rx="43" ry="50" fill="url(#belly)"/>
+      <!-- 手鳍 -->
+      <ellipse cx="-66" cy="150" rx="16" ry="28" transform="rotate(24 -66 150)" fill="url(#skin)"/>
+      <ellipse cx="66" cy="150" rx="16" ry="28" transform="rotate(-24 66 150)" fill="url(#skin)"/>
+      <!-- 手里的饭碗 -->
+      <g transform="translate(0,186)">
+        <path d="M -36 0 A 36 28 0 0 0 36 0 Z" fill="#eaf6ff" stroke="#4a9fdd" stroke-width="4" stroke-linejoin="round"/>
+        <ellipse cx="0" cy="0" rx="36" ry="9" fill="#ffffff" stroke="#4a9fdd" stroke-width="4"/>
+        <ellipse cx="0" cy="-3" rx="27" ry="8" fill="#fffaf0"/>
+        <ellipse cx="-8" cy="-6" rx="4" ry="2.5" fill="#ffffff"/>
+        <ellipse cx="9" cy="-4" rx="4" ry="2.5" fill="#ffffff"/>
+        <ellipse cx="1" cy="-9" rx="4" ry="2.5" fill="#ffffff"/>
+      </g>
+      <!-- 头 -->
+      <ellipse cx="0" cy="0" rx="106" ry="96" fill="url(#skin)"/>
+      <ellipse cx="0" cy="0" rx="106" ry="96" fill="url(#shine)"/>
+      <!-- 侧鳍耳 -->
+      <ellipse cx="-99" cy="14" rx="24" ry="33" transform="rotate(-20 -99 14)" fill="url(#skin)"/>
+      <ellipse cx="99" cy="14" rx="24" ry="33" transform="rotate(20 99 14)" fill="url(#skin)"/>
+      <!-- 眼睛 -->
+      <g>
+        <ellipse cx="-38" cy="8" rx="17" ry="21" fill="#22304a"/>
+        <circle cx="-44" cy="-1" r="6.5" fill="#ffffff"/>
+        <circle cx="-33" cy="15" r="3.2" fill="#ffffff" opacity="0.85"/>
+        <ellipse cx="38" cy="8" rx="17" ry="21" fill="#22304a"/>
+        <circle cx="32" cy="-1" r="6.5" fill="#ffffff"/>
+        <circle cx="43" cy="15" r="3.2" fill="#ffffff" opacity="0.85"/>
+      </g>
+      <!-- 腮红 -->
+      <ellipse cx="-64" cy="42" rx="19" ry="11" fill="url(#blush)"/>
+      <ellipse cx="64" cy="42" rx="19" ry="11" fill="url(#blush)"/>
+      <!-- 头顶小水柱 -->
+      <g transform="translate(0,-92)">
+        <path d="M -7 4 Q -30 -16 -19 -38" stroke="#a6dcf7" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M 7 4 Q 30 -16 19 -38" stroke="#a6dcf7" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <circle cx="0" cy="-46" r="8" fill="#cdeafd"/>
+        <circle cx="-21" cy="-45" r="5.5" fill="#cdeafd"/>
+        <circle cx="21" cy="-45" r="5.5" fill="#cdeafd"/>
+      </g>
+    </g>
+  </defs>
+
+  <rect width="760" height="560" fill="#f2fbff"/>
+  <ellipse cx="190" cy="292" rx="330" ry="200" fill="#e3f5ff" opacity="0.6"/>
+  <ellipse cx="570" cy="292" rx="330" ry="200" fill="#e3f5ff" opacity="0.6"/>
+
+  <!-- 左：平时（闭嘴） -->
+  <ellipse cx="190" cy="480" rx="96" ry="15" fill="#b9dff2" opacity="0.45"/>
+  <use href="#wg" x="190" y="292" transform="translate(190,292) scale(0.86) translate(-190,-292)"/>
+  <path d="M 174 344 Q 182 354 190 344 Q 198 354 206 344"
+        stroke="#3a5570" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="190" y="536" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif"
+        font-size="24" fill="#4a7fa5" font-weight="600">平时 · 闭嘴</text>
+
+  <!-- 右：接饭（张嘴） -->
+  <ellipse cx="570" cy="480" rx="96" ry="15" fill="#b9dff2" opacity="0.45"/>
+  <use href="#wg" x="570" y="292" transform="translate(570,292) scale(0.86) translate(-570,-292)"/>
+  <g>
+    <ellipse cx="570" cy="350" rx="27" ry="30" fill="#7a2b3a"/>
+    <path d="M 543 350 A 27 30 0 0 1 597 350 Z" fill="#8e3446"/>
+    <ellipse cx="570" cy="366" rx="18" ry="13" fill="#ff8fa6"/>
+    <ellipse cx="570" cy="350" rx="27" ry="30" fill="none" stroke="#3a5570" stroke-width="4"/>
+  </g>
+  <text x="570" y="536" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif"
+        font-size="24" fill="#4a7fa5" font-weight="600">接饭 · 张嘴</text>
+</svg>

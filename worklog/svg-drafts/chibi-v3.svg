@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1520 820" width="1520" height="820">
+<defs>
+  <linearGradient id="hairG" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0%" stop-color="#16294F"/><stop offset="35%" stop-color="#1F4785"/>
+    <stop offset="70%" stop-color="#2E76B4"/><stop offset="100%" stop-color="#6FD0E6"/>
+  </linearGradient>
+  <linearGradient id="hairBackG" x1="0.5" y1="0" x2="0.5" y2="1">
+    <stop offset="0%" stop-color="#14243F"/><stop offset="45%" stop-color="#1D4179"/>
+    <stop offset="80%" stop-color="#3079B5"/><stop offset="100%" stop-color="#6FD0E6"/>
+  </linearGradient>
+  <linearGradient id="skinG" x1="0.5" y1="0" x2="0.5" y2="1">
+    <stop offset="0%" stop-color="#FFF4EA"/><stop offset="100%" stop-color="#F7D8C0"/>
+  </linearGradient>
+  <linearGradient id="navyG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2C4A80"/><stop offset="100%" stop-color="#16264A"/>
+  </linearGradient>
+  <linearGradient id="apronG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#E3ECF6"/>
+  </linearGradient>
+  <linearGradient id="finG" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#9BDCF2"/><stop offset="100%" stop-color="#3E86C0"/>
+  </linearGradient>
+  <linearGradient id="tailG" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#25518F"/><stop offset="55%" stop-color="#3E8FC4"/>
+    <stop offset="100%" stop-color="#79D3E4"/>
+  </linearGradient>
+  <linearGradient id="eyeG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1B2A4E"/><stop offset="55%" stop-color="#2A4E86"/>
+    <stop offset="100%" stop-color="#68C4EC"/>
+  </linearGradient>
+  <radialGradient id="blushG">
+    <stop offset="0%" stop-color="#FF9CB4" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#FF9CB4" stop-opacity="0"/>
+  </radialGradient>
+
+  <g id="wc" stroke="#16233F" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- ===== 1. 鲸尾（最后层） ===== -->
+    <path fill="url(#tailG)" d="M 386 476 C 462 466 538 490 572 542 C 536 560 456 522 378 512 Z"/>
+    <path fill="url(#tailG)" d="M 556 546 C 596 504 646 482 692 490 C 684 534 648 566 592 580
+                              C 644 594 678 626 684 668 C 640 670 598 640 556 592 Z"/>
+
+    <!-- ===== 2. 后发 ===== -->
+    <path fill="url(#hairBackG)" d="M 350 106 C 462 106 500 190 500 262
+      C 500 352 516 436 508 490 C 502 528 472 542 456 518 C 446 502 452 456 446 414
+      L 254 414 C 248 456 254 502 244 518 C 228 542 198 528 192 490
+      C 184 436 200 352 200 262 C 200 190 238 106 350 106 Z"/>
+
+    <!-- ===== 3. 腿 / 白袜 / 鞋 ===== -->
+    <path fill="url(#skinG)" d="M 296 552 L 296 690 Q 296 708 318 708 Q 340 708 340 690 L 340 552 Z"/>
+    <path fill="url(#skinG)" d="M 360 552 L 360 690 Q 360 708 382 708 Q 404 708 404 690 L 404 552 Z"/>
+    <path fill="#FFFFFF" d="M 291 600 Q 291 588 300 596 Q 309 588 318 596 Q 327 588 336 596 Q 345 588 345 600
+                             L 345 690 Q 345 712 318 712 Q 291 712 291 690 Z"/>
+    <path fill="#FFFFFF" d="M 355 600 Q 355 588 364 596 Q 373 588 382 596 Q 391 588 400 596 Q 409 588 409 600
+                             L 409 690 Q 409 712 382 712 Q 355 712 355 690 Z"/>
+    <path fill="url(#navyG)" d="M 285 690 L 285 714 Q 285 740 318 740 Q 351 740 351 714 L 351 690 Z"/>
+    <path fill="url(#navyG)" d="M 349 690 L 349 714 Q 349 740 382 740 Q 415 740 415 714 L 415 690 Z"/>
+    <path fill="none" stroke="#C9A961" stroke-width="7" d="M 288 706 L 348 706"/>
+    <path fill="none" stroke="#C9A961" stroke-width="7" d="M 352 706 L 412 706"/>
+
+    <!-- ===== 4. 女仆装主体 ===== -->
+    <path fill="url(#navyG)" d="M 274 350 C 274 336 306 322 350 322 C 394 322 426 336 426 350
+      L 432 456 C 438 494 456 530 462 558 C 466 578 456 588 436 588 L 264 588
+      C 244 588 234 578 238 558 C 244 530 262 494 268 456 Z"/>
+    <!-- 围裙 -->
+    <path fill="url(#apronG)" d="M 304 366 L 396 366 C 396 400 398 432 402 456
+      C 424 474 434 506 434 532 C 434 552 418 560 398 560 L 302 560
+      C 282 560 266 552 266 532 C 266 506 276 474 298 456 C 302 432 304 400 304 366 Z"/>
+    <!-- 围裙鲸鱼徽章 -->
+    <ellipse cx="348" cy="512" rx="27" ry="17" fill="#4EA8E8" stroke-width="4"/>
+    <path fill="#4EA8E8" stroke-width="4" d="M 372 508 C 382 494 394 492 400 500 C 391 510 382 514 372 514 Z"/>
+    <path fill="#4EA8E8" stroke-width="4" d="M 342 526 C 344 536 350 540 356 540 C 352 530 350 524 350 520 Z"/>
+    <circle cx="337" cy="507" r="3" fill="#16233F" stroke="none"/>
+    <!-- 裙摆荷叶边 -->
+    <path fill="#FFFFFF" d="M 262 556 L 438 556 L 438 572
+      Q 427 598 416 572 Q 405 598 394 572 Q 383 598 372 572 Q 361 598 350 572
+      Q 339 598 328 572 Q 317 598 306 572 Q 295 598 284 572 Q 273 598 262 572 Z"/>
+    <!-- 围裙荷叶边 -->
+    <path fill="#FFFFFF" d="M 270 540 L 430 540 L 430 552
+      Q 420 574 410 552 Q 400 574 390 552 Q 380 574 370 552 Q 360 574 350 552
+      Q 340 574 330 552 Q 320 574 310 552 Q 300 574 290 552 Q 280 574 270 552 Z"/>
+
+    <!-- ===== 5. 手臂 ===== -->
+    <path fill="url(#navyG)" d="M 292 336 C 264 344 248 384 240 422 C 236 442 240 458 256 460
+      C 272 462 280 448 282 428 C 284 400 294 370 306 354 Z"/>
+    <path fill="url(#navyG)" d="M 408 336 C 436 344 452 384 460 422 C 464 442 460 458 444 460
+      C 428 462 420 448 418 428 C 416 400 406 370 394 354 Z"/>
+    <circle cx="252" cy="452" r="23" fill="#FFFFFF"/>
+    <circle cx="448" cy="452" r="23" fill="#FFFFFF"/>
+    <circle cx="246" cy="482" r="22" fill="url(#skinG)"/>
+    <circle cx="454" cy="482" r="22" fill="url(#skinG)"/>
+    <path fill="none" stroke="#16233F" stroke-width="3.5" d="M 236 478 C 242 474 250 474 256 478"/>
+    <path fill="none" stroke="#16233F" stroke-width="3.5" d="M 444 478 C 450 474 458 474 464 478"/>
+
+    <!-- ===== 6. 鲸鳍耳 ===== -->
+    <path fill="url(#finG)" d="M 248 222 C 206 208 166 224 156 260 C 148 292 170 320 208 320
+      C 236 320 252 304 256 284 Z"/>
+    <path fill="url(#finG)" d="M 452 222 C 494 208 534 224 544 260 C 552 292 530 320 492 320
+      C 464 320 448 304 444 284 Z"/>
+
+    <!-- ===== 7. 头（脸） ===== -->
+    <ellipse cx="350" cy="226" rx="112" ry="108" fill="url(#skinG)"/>
+
+    <!-- ===== 8. 五官 ===== -->
+    <!-- 眉 -->
+    <path fill="none" stroke="#2A3F66" stroke-width="5" d="M 274 200 Q 300 188 324 196"/>
+    <path fill="none" stroke="#2A3F66" stroke-width="5" d="M 426 200 Q 400 188 376 196"/>
+    <!-- 眼睛 -->
+    <ellipse cx="302" cy="250" rx="30" ry="36" fill="#FFFFFF"/>
+    <ellipse cx="398" cy="250" rx="30" ry="36" fill="#FFFFFF"/>
+    <ellipse cx="303" cy="252" rx="24" ry="30" fill="url(#eyeG)" stroke="none"/>
+    <ellipse cx="397" cy="252" rx="24" ry="30" fill="url(#eyeG)" stroke="none"/>
+    <ellipse cx="303" cy="248" rx="13" ry="17" fill="#0E1B34" stroke="none"/>
+    <ellipse cx="397" cy="248" rx="13" ry="17" fill="#0E1B34" stroke="none"/>
+    <ellipse cx="303" cy="268" rx="15" ry="10" fill="#7FD4F0" stroke="none" opacity="0.9"/>
+    <ellipse cx="397" cy="268" rx="15" ry="10" fill="#7FD4F0" stroke="none" opacity="0.9"/>
+    <circle cx="292" cy="238" r="10" fill="#FFFFFF" stroke="none"/>
+    <circle cx="386" cy="238" r="10" fill="#FFFFFF" stroke="none"/>
+    <circle cx="314" cy="266" r="5.5" fill="#FFFFFF" stroke="none" opacity="0.9"/>
+    <circle cx="408" cy="266" r="5.5" fill="#FFFFFF" stroke="none" opacity="0.9"/>
+    <ellipse cx="302" cy="250" rx="30" ry="36" fill="none"/>
+    <ellipse cx="398" cy="250" rx="30" ry="36" fill="none"/>
+    <!-- 鼻 -->
+    <path fill="none" stroke="#16233F" stroke-width="4" d="M 350 280 Q 356 286 350 289"/>
+    <!-- 腮红 -->
+    <ellipse cx="272" cy="288" rx="26" ry="16" fill="url(#blushG)" stroke="none"/>
+    <ellipse cx="428" cy="288" rx="26" ry="16" fill="url(#blushG)" stroke="none"/>
+
+    <!-- ===== 9. 刘海 ===== -->
+    <path fill="url(#hairG)" d="M 238 238 C 234 160 282 112 350 112 C 418 112 466 160 462 238
+      C 462 238 456 190 442 172 C 424 200 400 214 376 220
+      C 364 202 350 194 350 194 C 350 194 336 202 324 220
+      C 300 214 276 200 258 172 C 244 190 238 238 238 238 Z"/>
+
+    <!-- ===== 10. 侧发（含青色卷尾） ===== -->
+    <path fill="url(#hairG)" d="M 246 196 C 226 250 218 320 222 380 C 224 412 234 428 248 424
+      C 260 420 264 404 262 384 C 260 340 254 268 256 214 Z"/>
+    <path fill="url(#hairG)" d="M 454 196 C 474 250 482 320 478 380 C 476 412 466 428 452 424
+      C 440 420 436 404 438 384 C 440 340 446 268 444 214 Z"/>
+    <path fill="url(#hairG)" d="M 222 372 C 206 396 206 428 222 444 C 234 456 250 450 252 436
+      C 240 432 230 414 234 398 Z"/>
+    <path fill="url(#hairG)" d="M 478 372 C 494 396 494 428 478 444 C 466 456 450 450 448 436
+      C 460 432 470 414 466 398 Z"/>
+
+    <!-- ===== 11. 女仆头饰 ===== -->
+    <path fill="#FFFFFF" d="M 258 178 C 286 156 414 156 442 178 C 452 190 444 204 430 202
+      C 402 196 298 196 270 202 C 256 204 248 190 258 178 Z"/>
+    <path fill="#FFFFFF" d="M 262 176 Q 274 160 288 174 Q 302 158 316 172 Q 330 156 344 170
+      Q 358 156 372 170 Q 386 158 398 172 Q 412 160 424 174 Q 434 162 440 178
+      L 424 184 Q 350 172 276 184 Z"/>
+    <circle cx="350" cy="182" r="9" fill="#4EA8E8"/>
+
+    <!-- ===== 12. 呆毛 ===== -->
+    <path fill="none" stroke="#16233F" stroke-width="19" stroke-linecap="round"
+      d="M 342 128 C 336 92 354 64 388 60 C 416 57 432 76 428 96"/>
+    <path fill="none" stroke="#2E76B4" stroke-width="10" stroke-linecap="round"
+      d="M 342 128 C 336 92 354 64 388 60 C 416 57 432 76 428 96"/>
+
+    <!-- ===== 13. 衣领 + 领结 ===== -->
+    <path fill="#FFFFFF" d="M 300 336 C 318 328 382 328 400 336 C 414 346 410 366 394 368
+      C 372 372 328 372 306 368 C 290 366 286 346 300 336 Z"/>
+    <path fill="#FFFFFF" d="M 296 334 Q 308 324 320 334 Q 332 324 344 334 Q 356 324 368 334
+      Q 380 324 392 334 Q 402 326 408 338 L 396 344 Q 350 334 304 344 Z"/>
+  </g>
+</defs>
+
+<rect width="1520" height="820" fill="#F5EADD"/>
+
+<use xlink:href="#wc"/>
+<!-- 左：闭嘴 -->
+<path fill="none" stroke="#16233F" stroke-width="4.5" stroke-linecap="round"
+  d="M 334 302 Q 342 314 350 304 Q 358 314 366 302"/>
+<!-- 右：张嘴接饭 -->
+<use xlink:href="#wc" x="760"/>
+<ellipse cx="1110" cy="314" rx="32" ry="34" fill="#8C2B3E" stroke="#16233F" stroke-width="4.5"/>
+<ellipse cx="1110" cy="334" rx="21" ry="12" fill="#FF8FA6" stroke="none"/>
+<path fill="none" stroke="#16233F" stroke-width="3.5" d="M 1088 300 Q 1110 292 1132 300"/>
+
+<text x="350" y="790" text-anchor="middle" font-family="PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif"
+  font-size="34" font-weight="600" fill="#2A4E86">平时 · 闭嘴</text>
+<text x="1110" y="790" text-anchor="middle" font-family="PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif"
+  font-size="34" font-weight="600" fill="#2A4E86">接饭 · 张嘴</text>
+</svg>
