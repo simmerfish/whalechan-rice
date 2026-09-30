@@ -14,6 +14,43 @@
 
 ---
 
+## 先看一眼
+
+### 角色
+
+游戏里就是这三张透明立绘在切换（原画在 `art-source/`，从手绘到成图的全过程在 `worklog/`）：
+
+![鲸鱼娘 · 闭嘴 / 张嘴 / 开心](screenshots/characters.png)
+
+### 主菜单
+
+![主菜单](screenshots/title.png)
+
+### 对局
+
+| 电脑（键盘） | 手机 / 平板（触屏） |
+| :---: | :---: |
+| ![键盘对局](screenshots/play.png) | ![触屏对局](screenshots/play-touch.png) |
+
+按住 `空格`张嘴接饭、松手闭嘴弹开；手机上是**按住屏幕任意处**张嘴、左下两个圆键推方向。
+
+### 各个页面
+
+| 难度选择 | 米饭图鉴 | 最高分 |
+| :---: | :---: | :---: |
+| ![难度选择](screenshots/diff.png) | ![米饭图鉴](screenshots/codex.png) | ![最高分](screenshots/best.png) |
+
+### 结算
+
+| 🎉 通关 · 吃饱啦 | 💫 失败 · 饿晕 |
+| :---: | :---: |
+| ![通关结算](screenshots/over-win.png) | ![失败结算](screenshots/over-lose.png) |
+
+> 截图里那个「最高分」是演示用的数字，不是真实成绩。
+
+---
+
+
 ## 在中国大陆怎么打开 / 分享
 
 GitHub 的域名在国内**时通时不通**，所以准备了下面几条路，从最稳的开始。
@@ -198,12 +235,14 @@ whale-game/
 ├── art-source/         ← 立绘的原始出处（奶白底，不参与游戏运行）
 │   ├── whalechan-*-original.png   三张原图（缩到 675×900）
 │   └── whalechan-prompt.md        生成这三张立绘用的完整提示词
+├── screenshots/        ← README 里用的图（角色原画 + 各个界面），由 tools/shots.py 生成
 ├── preview/            ← 给你看的检查图
 ├── tools/              ← 开发用的脚本，玩游戏不需要
 │   ├── keyout.py            把 AI 出的奶白底立绘抠成透明 PNG（纯 Python 标准库）
 │   ├── composite.py         把抠好的图合成到品红底上，检查有没有残留白边
 │   ├── preview_hitbox.py    把判定框叠在立绘上渲染出来，方便调参
 │   ├── preview_touch.py     把触屏虚拟键和 HUD 画在一起，检查有没有互相遮挡
+│   ├── shots.py             用无头 Chrome 截各个界面 → screenshots/（含三态立绘拼图）
 │   ├── harness2.js          界面导航 + 120 秒乱按压力测试（键盘）
 │   └── harness3.js          专项：通关流程 / buff 覆盖 / UI 越界 / 触屏与指针交互
 ├── worklog/            ← 过程稿（手绘 SVG 六版 + AI 原始大图），玩游戏不需要，可整目录删
@@ -226,6 +265,8 @@ python3 tools/composite.py                      # → preview/halo-check-*.png�
 python3 tools/preview_hitbox.py                 # → preview/check_layout.png / check_states.png
 python3 tools/preview_touch.py                  # → preview/check_touch.png
 python3 tools/inline.py                         # 生成 whalechan-standalone.html（自包含单文件版）
+python3 tools/shots.py                          # 重截 README 那套图 → screenshots/（要本机有 Chrome）
+python3 tools/shots.py play over-win            # 也可以只重截指名的几张
 node    tools/harness2.js                       # 回归：界面导航 + 120 秒乱按压力测试
 HTML_FILE=whalechan-standalone.html node tools/harness2.js   # 回归：那份单文件版也要能跑
 node    tools/harness3.js                       # 回归：通关 / buff / UI 越界 / 触屏交互
